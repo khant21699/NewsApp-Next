@@ -18,7 +18,7 @@ function NavLinks({ setShowNav }: props) {
       onClick={() => {
         if (setShowNav !== undefined) setShowNav(false);
       }}
-      className=" grid grid-cols-3 md:grid-cols-7 text-xs md:text-sm gap-4 pb-10 max-w-6xl mx-auto border-b max-sm:flex max-sm:flex-col"
+      className=" grid grid-cols-3 md:grid-cols-7 text-xs md:text-sm gap-4 pb-10 max-w-6xl mx-auto border-b border-black dark:border-white max-sm:flex max-sm:flex-col"
     >
       {categories.map((category, index) => (
         <NavLink
