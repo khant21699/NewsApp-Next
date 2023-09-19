@@ -7,7 +7,7 @@ function NotFound() {
       <h2 className="headerTitle text-center">
         Cannot Find the Page You Are Looking For
       </h2>
-      <Link href="/">
+      <Link href="/" prefetch={false}>
         <h3 className=" animate-pulse text-2xl underline mt-4 text-center">
           Go to Home Page
         </h3>
