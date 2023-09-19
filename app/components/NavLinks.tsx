@@ -4,13 +4,22 @@ import { usePathname } from "next/navigation";
 import NavLink from "./NavLink";
 import { categories } from "@/constants";
 
-function NavLinks() {
+type props = {
+  setShowNav?: (val: boolean) => void;
+};
+
+function NavLinks({ setShowNav }: props) {
   const pathName = usePathname();
   const isAvtive = (path: string) => {
     return pathName.split("/").pop() === path;
   };
   return (
-    <nav className=" grid grid-cols-3 md:grid-cols-7 text-xs md:text-sm gap-4 pb-10 max-w-6xl mx-auto border-b">
+    <nav
+      onClick={() => {
+        if (setShowNav !== undefined) setShowNav(false);
+      }}
+      className=" grid grid-cols-3 md:grid-cols-7 text-xs md:text-sm gap-4 pb-10 max-w-6xl mx-auto border-b max-sm:flex max-sm:flex-col"
+    >
       {categories.map((category, index) => (
         <NavLink
           key={index}

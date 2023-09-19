@@ -3,16 +3,15 @@ import React from "react";
 import LiveTimeStamp from "../components/LiveTimeStamp";
 
 type Props = {
-  searchParams?: Article;
+  searchParams: Article;
 };
 
 export default function page({ searchParams }: Props) {
-  if (
-    (searchParams && Object.entries(searchParams).length === 0) ||
-    !searchParams
-  ) {
+  if (searchParams.description == undefined) {
     notFound();
   }
+  // console.log(searchParams);
+  // console.log(Object.entries(searchParams));
 
   const article: Article = searchParams;
   return (
@@ -47,6 +46,16 @@ export default function page({ searchParams }: Props) {
             </p>
           </div>
           <p className="pt-4">{article.description}</p>
+          <p className="pt-4 flex gap-1 mb-5">
+            <span className=" whitespace-nowrap">Link :</span>{" "}
+            <a
+              target="_blank"
+              className="break-all	 underline underline-offset-4 decoration-orange-400"
+              href={article.url}
+            >
+              {article.url}
+            </a>
+          </p>
         </div>
       </section>
     </article>
