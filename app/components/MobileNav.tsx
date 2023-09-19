@@ -14,7 +14,7 @@ const MobileNav = () => {
         className=" h-8 w-8 cursor-pointer hidden max-sm:block"
       />
       {showNav && (
-        <div className="fixed bg-slate-200 w-[50vw] h-[200vh] left-0 top-0 dark:bg-slate-900 transition-all duration-200 ease-out">
+        <div className="fixed z-10 bg-slate-200 w-[50vw] h-[200vh] left-0 top-0 dark:bg-slate-900 transition-all duration-200 ease-out">
           <div className="mt-4 items-center flex justify-around pb-4 border-b-[2px] border-orange-500 ">
             <h2 className="text-xl text-center ">Categories</h2>
             <XMarkIcon
