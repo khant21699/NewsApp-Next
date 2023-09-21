@@ -1,4 +1,3 @@
-import Image from "next/image";
 import React from "react";
 import ReadmoreButton from "./ReadmoreButton";
 import LiveTimeStamp from "./LiveTimeStamp";

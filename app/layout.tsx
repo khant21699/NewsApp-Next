@@ -9,6 +9,10 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Live News",
   description: "Daily Updated News for you",
+  icons: {
+    icon: "../favicon.png",
+    apple: "../favicon.png",
+  },
 };
 
 export default function RootLayout({

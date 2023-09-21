@@ -1,9 +1,14 @@
 import { notFound } from "next/navigation";
 import React from "react";
 import LiveTimeStamp from "../components/LiveTimeStamp";
+import { Metadata } from "next";
 
 type Props = {
   searchParams: Article;
+};
+
+export const metadata: Metadata = {
+  title: "Article",
 };
 
 export default function page({ searchParams }: Props) {
